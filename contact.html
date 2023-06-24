@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Me</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="navigation">
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Rest of your website content -->
+  <h2>Contact</h2>
+  <form action="process.php" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" required><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required><br>
+    
+    <label for="message">Message:</label>
+    <textarea name="message" id="message" rows="5" required></textarea><br>
+    
+    <input type="submit" value="Submit">
+  </form>
+  
+  <footer>
+    <p>&copy; 2023 Tushar Shrivastav</p>
+  </footer>
+</body>
+</html>
+
