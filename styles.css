@@ -40,3 +40,11 @@ header {
   color: #c0c0c0;
 }
 
+.experience {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px; /* Add some padding to create visual separation */
+}
+
+.center-text {
+  text-align: center;
+}

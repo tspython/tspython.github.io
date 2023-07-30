@@ -22,10 +22,10 @@
   <header>
     <nav>
       <ul class="navigation">
-        <li><a href="index.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.php">About</a></li>
+        <li><a href="projects.php">Projects</a></li>
+        <li><a href="contact.php">Contact</a></li>
+        <li><a href="blog.php">Blog</a></li>
       </ul>
     </nav>
   </header>
