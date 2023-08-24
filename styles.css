@@ -48,3 +48,8 @@ header {
 .center-text {
   text-align: center;
 }
+
+.divider {
+  border-top: 1px solid #ddd;
+  margin: 40px 0;
+}
