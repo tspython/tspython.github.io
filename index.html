@@ -14,6 +14,8 @@
             flex-direction: row;
             align-items: center;
             margin-bottom: 20px;
+                        justify-content: center; /* Center horizontally */
+
         }
 
         .project-container img {
@@ -158,6 +160,35 @@ nav {
     </tr>
     </tbody>
 </table>
+<!-- Projects Section -->
+<!-- Projects Section -->
+            <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                <tbody>
+                <tr>
+                    <td style="padding:20px;width:100%;vertical-align:middle">
+                        <h2>Projects</h2>
+                        <p>
+                            My independent programming/graphics work.
+                        </p>
+
+                    </td>
+                </tr>
+                <!-- 3D Face Object Mesh Project -->
+                <tr class="project-container">
+                    <td style="padding:20px;width:25%;vertical-align:middle">
+                        <img src='images/face_rotation.gif' loop="true" alt="3D Face Object Mesh GIF" style="width: 350%;">
+                    </td>
+                    <td class="project-description">
+                        <h2>3D Face Object</h2>
+                        <p>
+                           Using SDL to render a 3D face object
+by reading vertex and triangle data from files,
+performing rotations and zoom based on user input, and displaying the object on the screen.
+                        </p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
 <script type="text/javascript">
     function smerf_start() {
         document.getElementById('smerf_image').style.opacity = "1";
