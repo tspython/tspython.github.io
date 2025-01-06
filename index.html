@@ -8,7 +8,6 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <style>
-        /* Add custom CSS here */
         .project-container {
             display: flex;
             flex-direction: row;
@@ -22,14 +21,14 @@
             flex-direction: row;
             align-items: center;
             margin-bottom: 20px;
-            justify-content: center; /* Center horizontally */
+            justify-content: center;
 
         }
 
         .project-container img {
             max-width: 100%;
             height: auto;
-            margin-right: 20px; /* Add some space between logo and description */
+            margin-right: 20px;
         }
 
         .project-description {
@@ -48,7 +47,7 @@ nav {
 </head>
 <header>
     <nav>
-      <a href="index.html">Home</a> | <a href="blog.html">Blog</a>
+            <a href="index.html">Home</a> | <a href="blog.html">Blog</a> | <a href="nfl_bracket.html">NFL Bracket Maker</a>
     </nav>
 </header>
 <body>
@@ -84,7 +83,7 @@ nav {
                 <tbody>
                 <tr>
                     <td style="padding:20px;width:100%;vertical-align:middle">
-                        <h2>Research</h2>
+                       <h2>Research</h2>
                         <p>
                             I'm interested in Computer Graphics and Vision, specifically rendering, computational photography, geometry, and graphics hardware.
                         </p>
@@ -129,10 +128,9 @@ nav {
                         </p>
                     </td>
                 </tr>
-                             <!-- DOxy Project (without logo) -->
                 <tr class="project-container">
-                    <td></td> <!-- Placeholder for empty logo column -->
-                    <td class="project-description-center"> <!-- Centered project description -->
+                    <td></td>
+                    <td class="project-description-center">
                         <h2>DOxy: Dissolved Oxygen Monitoring</h2>
                         <p>
                             DOxy is an IoT System which utilizes cost-effective, accessible, and sustainable Sensing Units (SUs) for measuring the dissolved oxygen levels present in bodies of water which send their readings to a web based cloud infrastructure for storage, analysis, and visualization. DOxy's SUs are equipped with a High-sensitivity Pulse Oximeter meant for measuring dissolved oxygen levels in human blood, not water. Hence a number of parallel readings of water samples were gathered by both the High-sensitivity Pulse Oximeter and a standard dissolved oxygen meter. Then two approaches were investigated. One, in which various machine learning models were trained and tested to produce a dynamic mapping of sensor readings to actual DO values. And another in which curve-fitting models were used to produce successful conversion formula usable in the DOxy SUs offline. Both proved successful in producing accurate results. <a href = "data/doxy.pdf">Pending Publication "DOxy 2.0" in MDPI Sensor Networks Journal.</a>
