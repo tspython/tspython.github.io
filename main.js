@@ -9,22 +9,22 @@ let nfc_conf_teams;
 
 const teams = {
   afc: [
-    "chiefs",      // 1 seed
-    "bills",       // 2 seed
-    "ravens",      // 3 seed
-    "texans",      // 4 seed
-    "browns",      // 5 seed
-    "dolphins",    // 6 seed
-    "steelers"     // 7 seed
+    "chiefs",         // 1 seed
+    "bills",        // 2 seed
+    "ravens",        // 3 seed
+    "texans",        // 4 seed
+    "chargers",        // 5 seed  
+    "steelers",        // 6 seed
+    "broncos"         // 7 seed;
   ],
   nfc: [
-    "lions",       // 1 seed
-    "eagles",      // 2 seed
-    "bucs",        // 3 seed
+    "lions",        // 1 seed
+    "eagles",        // 2 seed
+    "buccaneers",         // 3 seed
     "rams",        // 4 seed
-    "vikings",     // 5 seed
-    "washington",  // 6 seed
-    "packers"      // 7 seed
+    "vikings",        // 5 seed
+    "football",        // 6 seed
+    "packers"          // 7 seed
   ]
 };
 
