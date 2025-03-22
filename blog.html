@@ -1,68 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/x-icon" href="images/favicon.ico">
-<title>Tushar's Blog</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #fff; /* white background */
-    color: #000; /* black text */
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-  }
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  h1 {
-    color: #000;
-  }
-  h2 {
-    color: #555; /* dark gray */
-  }
-  p {
-    color: #333; /* dark gray */
-  }
-  a {
-    color: #000;
-  }
-  a:hover {
-    color: #666; /* light gray on hover */
-  }
-  .post {
-    margin-bottom: 40px;
-  }
-  .date {
-    color: #777;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>Tushar's Blog</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-<div class="container">
-  <header>
-    <h1>Tushar's Blog</h1>
-    <nav>
-        <a href="index.html">Home</a> | <a href="blog.html">Blog</a>
-    </nav>
-  </header>
-  <li>
-<span>
-<i>
-<time datetime="2024-02-13">
-13 Feb, 2024
-</time>
-</i>
-</span>
-<a href="blogs/hello-world.html">Hello World</a>
-</li>
+    <header>
+        <h1>Tushar's Blog</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="nfl_bracket.html">NFL Bracket Maker</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <h2 class="section-title">Blog Posts</h2>
+            
+            <div class="blog-post">
+                <div class="blog-date">
+                    <time datetime="2024-02-13">13 Feb, 2024</time>
+                </div>
+                <h3 class="project-title">
+                    <a href="blogs/hello-world.html">Hello World</a>
+                </h3>
+            </div>
+            
+            <!-- More blog posts can be added here in the future -->
+        </section>
+    </main>
+
     <footer>
-    <p>&copy; 2024 Tushar's Blog. All rights reserved.</p>
-  </footer>
-</div>
+        <p>&copy; 2025 Tushar's Blog. All rights reserved.</p>
+    </footer>
 </body>
 </html>

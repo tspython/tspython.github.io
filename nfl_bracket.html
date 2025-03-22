@@ -9,8 +9,34 @@
   <script type="module" src="main.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.19.1/URI.min.js"></script>
+  <link rel="stylesheet" href="main.css" />
 
   <style>
+    /* Override some main.css styles for NFL bracket */
+    .bracket {
+      flex-direction: row !important;
+    }
+    
+    /* Reset button style */
+    #reset button {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 20px;
+      transition: background-color 0.2s ease;
+    }
+    
+    #reset button:hover {
+      background-color: #333;
+    }
+    
+    /* Original team logo styles */
     .afc_logo {
       background-image: url('/images/assets/nfl/afc.gif');
     }
@@ -138,6 +164,15 @@
 </head>
 
 <body>
+  <header>
+    <h1>NFL Playoff Bracket Maker</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="nfl_bracket.html">NFL Bracket Maker</a>
+    </nav>
+  </header>
+
   <div class="container">
     <div id="top" class="top">
       <div class="afc_logo"></div>
@@ -187,9 +222,13 @@
     </div>
 
     <div id="reset">
-      <button id="reset">reset selections</button>
+      <button id="reset">Reset Selections</button>
     </div>
   </div>
+
+  <footer>
+    <p>&copy; 2025 Tushar Shrivastav. All rights reserved.</p>
+  </footer>
 </body>
 
 </html>
