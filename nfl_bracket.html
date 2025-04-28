@@ -3,48 +3,96 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="stylesheet" href="styles.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NFL Playoff Bracket</title>
+  <title>NFL Bracket Maker</title>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script type="module" src="main.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.19.1/URI.min.js"></script>
-  <link rel="stylesheet" href="main.css" />
 
   <style>
-    /* Override some main.css styles for NFL bracket */
+    /* NFL Bracket specific styles */
+    .bracket-wrapper {
+      overflow-x: auto;
+      max-width: 100%;
+      padding-bottom: 20px;
+    }
+    
     .bracket {
       flex-direction: row !important;
+      min-width: 1000px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     
     /* Reset button style */
     #reset button {
-      background-color: #000;
+      background-color: #222;
       color: #fff;
       border: none;
       padding: 10px 20px;
       font-size: 1rem;
       cursor: pointer;
-      border-radius: 3px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      border-radius: 0;
+      text-transform: lowercase;
       margin-top: 20px;
-      transition: background-color 0.2s ease;
     }
     
-    #reset button:hover {
-      background-color: #333;
+    .top {
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
     }
-    
-    /* Original team logo styles */
+
+    .nfc_logo, .afc_logo {
+      width: 100px;
+      height: 100px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      top: 0;
+      position: relative;
+    }
+
     .afc_logo {
+      margin-right: 100px;
       background-image: url('/images/assets/nfl/afc.gif');
     }
 
     .nfc_logo {
+      margin-left: 100px;
       background-image: url('/images/assets/nfl/nfc.gif');
     }
 
+    .team {
+      width: 100px;
+      height: 70px;
+      margin: 2px 2px;
+      border: 1px solid #222;
+      display: block;
+      position: relative;
+      background-color: #111;
+    }
+
+    .team_logo {
+      width: 90px;
+      height: 60px;
+      border: 0;
+      margin: 5px;
+      padding: 0;
+      top: 0;
+      left: 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+    }
+    
+    /* Team logo styles */
     .team_logo.ravens {
       background-image: url("/images/assets/nfl/ravens.svg");
     }
@@ -160,75 +208,129 @@
     .team_logo.lions {
       background-image: url("/images/assets/nfl/lions.svg");
     }
+    
+    /* Bracket styles */
+    .round {
+      margin: 0 5px;
+      display: flex;
+      flex-direction: column;
+      background-color: #111;
+      padding: 10px;
+    }
+    
+    .game {
+      margin: 20px auto;
+      white-space: nowrap;
+    }
+    
+    .label {
+      font-weight: normal;
+      text-align: center;
+      margin-bottom: 10px;
+      text-transform: lowercase;
+    }
+    
+    .champ {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .champ_label {
+      text-transform: lowercase;
+    }
+    
+    .team-clickable {
+      cursor: pointer;
+    }
+    
+    #share_url {
+      width: 300px;
+      background-color: #111;
+      color: #fff;
+      border: 1px solid #222;
+      padding: 8px;
+    }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>NFL Playoff Bracket Maker</h1>
+    <h1>tushar</h1>
+    <p class="subtitle">programmer</p>
+    
+    <div class="social-icons">
+        <a href="https://github.com/tspython/" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://twitter.com/tspython6535" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.shadertoy.com/user/case6535" title="Shadertoy"><i class="fa fa-code"></i></a>
+    </div>
+    
     <nav>
-      <a href="index.html">Home</a>
-      <a href="blog.html">Blog</a>
-      <a href="nfl_bracket.html">NFL Bracket Maker</a>
+        <a href="index.html">home</a>
+        <a href="blog.html">blog</a>
+        <a href="nfl_bracket.html">nfl bracket maker</a>
+        <a href="graphics.html">graphics programming</a>
     </nav>
   </header>
 
-  <div class="container">
-    <div id="top" class="top">
-      <div class="afc_logo"></div>
-      <div class="champ">
-        <span class="champ_label">Champion</span>
-        <div class="team">
-          <div class="team_logo">&nbsp;</div>
+  <main>
+    <h2>nfl bracket maker</h2>
+    
+    <div class="bracket-wrapper">
+      <div id="top" class="top">
+        <div class="afc_logo"></div>
+        <div class="champ">
+          <span class="champ_label">champion</span>
+          <div class="team">
+            <div class="team_logo">&nbsp;</div>
+          </div>
         </div>
+        <div class="nfc_logo"></div>
       </div>
-      <div class="nfc_logo"></div>
-    </div>
-    <div id="bracket" class="bracket">
-      <div id="afc_wc" class="round wildcard">
-        <div class="label">Wildcard</div>
-        <div class="game"></div>
-        <div class="game"></div>
-        <div class="game"></div>
-      </div>
-      <div id="afc_div" class="round divisional">
-        <div class="label">Divisional</div>
-        <div class="game"></div>
-        <div class="game"></div>
-      </div>
-      <div id="afc_conf" class="round conference">
-        <div class="label">Conference</div>
-        <div class="game"></div>
-      </div>
-      <div id="sb_game" class="round superbowl">
-        <div class="label">Super Bowl</div>
-        <div class="game"></div>
-      </div>
-      <div id="nfc_conf" class="round conference">
-        <div class="label">Conference</div>
-        <div class="game"></div>
-      </div>
-      <div id="nfc_div" class="round divisional">
-        <div class="label">Divisional</div>
-        <div class="game"></div>
-        <div class="game"></div>
-      </div>
-      <div id="nfc_wc" class="round wildcard">
-        <div class="label">Wildcard</div>
-        <div class="game"></div>
-        <div class="game"></div>
-        <div class="game"></div>
+      <div id="bracket" class="bracket">
+        <div id="afc_wc" class="round wildcard">
+          <div class="label">wildcard</div>
+          <div class="game"></div>
+          <div class="game"></div>
+          <div class="game"></div>
+        </div>
+        <div id="afc_div" class="round divisional">
+          <div class="label">divisional</div>
+          <div class="game"></div>
+          <div class="game"></div>
+        </div>
+        <div id="afc_conf" class="round conference">
+          <div class="label">conference</div>
+          <div class="game"></div>
+        </div>
+        <div id="sb_game" class="round superbowl">
+          <div class="label">super bowl</div>
+          <div class="game"></div>
+        </div>
+        <div id="nfc_conf" class="round conference">
+          <div class="label">conference</div>
+          <div class="game"></div>
+        </div>
+        <div id="nfc_div" class="round divisional">
+          <div class="label">divisional</div>
+          <div class="game"></div>
+          <div class="game"></div>
+        </div>
+        <div id="nfc_wc" class="round wildcard">
+          <div class="label">wildcard</div>
+          <div class="game"></div>
+          <div class="game"></div>
+          <div class="game"></div>
+        </div>
       </div>
     </div>
 
     <div id="reset">
-      <button id="reset">Reset Selections</button>
+      <button id="reset">reset selections</button>
     </div>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Tushar Shrivastav. All rights reserved.</p>
-  </footer>
+  </main>
 </body>
 
 </html>

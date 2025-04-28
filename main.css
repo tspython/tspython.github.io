@@ -1,9 +1,9 @@
-/* Main CSS for Tushar's website - Black and White Theme */
+/* minimal dark theme */
 
-/* Font imports */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+/* font imports */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap');
 
-/* Reset and base styles */
+/* reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,228 +11,207 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   line-height: 1.6;
-  color: #000;
-  background-color: #fff;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  color: #fff;
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
 }
 
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  margin-bottom: 1rem;
-  line-height: 1.3;
+/* header / sidebar */
+header {
+  width: 220px;
+  height: 100vh;
+  padding: 40px 20px 40px 30px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-right: 1px solid #222;
+  overflow-y: auto;
 }
 
 h1 {
-  font-size: 2.5rem;
-  border-bottom: 2px solid #000;
-  padding-bottom: 0.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 0;
+  text-align: left;
+  font-weight: 400;
+  text-transform: lowercase;
+  white-space: nowrap;
+}
+
+.subtitle {
+  font-weight: 300;
+  font-size: 0.9rem;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+  text-transform: lowercase;
+}
+
+.social-icons {
+  display: flex;
   margin-bottom: 1.5rem;
 }
 
+.social-icons a {
+  margin: 0.4rem 0.8rem 0.4rem 0;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons a:before {
+  content: "";
+  display: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+nav a {
+  margin: 0.4rem 0;
+  font-size: 0.85rem;
+  display: flex;
+  text-transform: lowercase;
+}
+
+nav a:before {
+  content: "•";
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+/* main content */
+main {
+  flex: 1;
+  margin-left: 220px;
+  padding: 40px;
+  max-width: calc(100vw - 220px);
+}
+
+/* typography */
+h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  text-transform: lowercase;
+}
+
 h2 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-top: 2rem;
 }
 
 p {
   margin-bottom: 1.5rem;
-}
-
-a {
-  color: #000;
-  text-decoration: none;
-  border-bottom: 1px solid #000;
-  transition: all 0.2s ease;
-}
-
-a:hover, a:focus {
-  color: #555;
-  border-bottom: 1px solid #555;
-}
-
-/* Layout and containers */
-.container {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Header and Navigation */
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 0;
-  margin-bottom: 2rem;
-  border-bottom: 1px solid #ddd;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  padding: 1rem 0;
-  width: 100%;
-}
-
-nav a {
-  margin: 0 1rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid #000;
-  border-radius: 3px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   font-size: 0.9rem;
 }
 
-nav a:hover {
-  background-color: #000;
+a {
   color: #fff;
-  border-color: #000;
+  text-decoration: none;
 }
 
-/* Profile section */
-.profile {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 3rem;
+a:hover {
+  opacity: 0.7;
 }
 
-.profile-image {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 3rem;
-  border: 2px solid #000;
-}
-
-.profile-info {
-  flex: 1;
-}
-
-.profile-name {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.profile-links {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.profile-links a {
-  border-bottom: none;
-  font-weight: 500;
-}
-
-/* Projects and Research */
+/* projects */
 .section {
   margin-bottom: 4rem;
 }
 
 .section-title {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  position: relative;
-}
-
-.section-title::after {
-  content: "";
-  display: block;
-  width: 50px;
-  height: 3px;
-  background-color: #000;
-  margin: 0.5rem auto;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  text-align: left;
 }
 
 .project {
   display: flex;
-  align-items: center;
-  margin-bottom: 3rem;
+  flex-direction: column;
+  margin-bottom: 2.5rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #222;
 }
 
 .project-image {
-  width: 30%;
-  max-width: 300px;
-  margin-right: 2rem;
-  border: 1px solid #ddd;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 1.5rem;
+  align-self: flex-start;
 }
 
 .project-info {
-  flex: 1;
+  width: 100%;
 }
 
 .project-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
-/* Blog */
+/* blog */
 .blog-post {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #222;
 }
 
 .blog-date {
-  color: #666;
-  font-size: 0.9rem;
+  color: #aaa;
+  font-size: 0.8rem;
   margin-bottom: 0.5rem;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 2rem 0;
-  margin-top: 3rem;
-  border-top: 1px solid #ddd;
-  font-size: 0.9rem;
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.8rem;
 }
 
-/* Responsive styles */
+/* container for nfl bracket */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* bracket styles */
+.bracket-wrapper {
+  overflow-x: auto;
+  max-width: 100%;
+  padding-bottom: 20px;
+}
+
+/* responsive */
 @media (max-width: 768px) {
-  .profile {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .profile-image {
-    margin-right: 0;
-    margin-bottom: 1.5rem;
-  }
-  
-  .profile-links {
-    justify-content: center;
-  }
-  
-  .project {
+  body {
     flex-direction: column;
   }
   
-  .project-image {
+  header {
     width: 100%;
-    max-width: none;
-    margin-right: 0;
-    margin-bottom: 1.5rem;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid #222;
+    padding: 20px;
   }
   
-  nav {
-    flex-wrap: wrap;
-  }
-  
-  nav a {
-    margin: 0.5rem;
+  main {
+    margin-left: 0;
+    max-width: 100%;
+    padding: 20px;
   }
 } 

@@ -2,121 +2,196 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Tushar Shrivastav</title>
+    <title>tushar</title>
     <meta name="author" content="Tushar Shrivastav">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="main.css">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .work-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #222;
+        }
+        
+        .work-logo {
+            width: 80px;
+            height: 60px;
+            margin-right: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+        }
+        
+        .work-logo img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        .epic-logo {
+            width: 70px;
+        }
+        
+        .realtor-logo {
+            width: 60px;
+        }
+        
+        .work-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .work-company {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .research-item {
+            background-color: #111;
+            border: 1px solid #222;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .research-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+            align-self: center;
+        }
+
+        .research-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            text-align: center;
+        }
+
+        .research-desc {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <h1>Tushar Shrivastav</h1>
+        <h1>tushar</h1>
+        <p class="subtitle">programmer</p>
+        
+        <div class="social-icons">
+            <a href="https://github.com/tspython/" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/tspython6535" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.shadertoy.com/user/case6535" title="Shadertoy"><i class="fa fa-code"></i></a>
+        </div>
+        
         <nav>
-            <a href="index.html">Home</a>
-            <a href="blog.html">Blog</a>
-            <a href="nfl_bracket.html">NFL Bracket Maker</a>
+            <a href="index.html">home</a>
+            <a href="blog.html">blog</a>
+            <a href="nfl_bracket.html">nfl bracket maker</a>
+            <a href="graphics.html">graphics programming</a>
         </nav>
     </header>
 
-    <main class="container">
-        <!-- Profile Section -->
-        <section class="profile">
-            <img src="images/pfp.jpg" alt="Profile photo" class="profile-image">
+    <main>
+        <!-- Work History Section -->
+        <section class="section">
+            <h2 class="section-title">work history</h2>
             
-            <div class="profile-info">
-                <h2 class="profile-name">Tushar Shrivastav</h2>
-                <p>I'm a Computer Science Major at Santa Clara University, where I work in the EPIC and Cloud Labs.</p>
-                <p>My research so far has led me to develop IoT solutions to automate agriculture, virtual reality software, and machine learning algorithms for malware detection.</p>
-                
-                <div class="profile-links">
-                    <a href="mailto:tshrivastav@scu.edu">Email</a>
-                    <a href="data/tushar_shrivastav_cv.pdf">CV</a>
-                    <a href="https://twitter.com/tspython6535">Twitter</a>
-                    <a href="https://github.com/tspython/">Github</a>
+            <div class="work-item">
+                <div class="work-logo">
+                    <img src="images/epic_logo.svg" alt="Epic Systems Logo" class="epic-logo">
                 </div>
+                <div class="work-info">
+                    <h3 class="work-title">Software Engineer</h3>
+                    <p class="work-company">Epic Systems</p>
+                </div>
+            </div>
+            
+            <div class="work-item">
+                <div class="work-logo">
+                    <img src="images/realtor_logo.svg" alt="Realtor.com Logo" class="realtor-logo">
+                </div>
+                <div class="work-info">
+                    <h3 class="work-title">Co-op Software Engineer</h3>
+                    <p class="work-company">Realtor.com</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section class="section">
+            <h2 class="section-title">projects</h2>
+            
+            <div class="research-grid">
+                <!-- Candora.ai Project -->
+                <a href="https://candora.ai" class="research-item" style="text-decoration: none;">
+                    <img src="images/candoraai.png" alt="Candora.ai" style="width: 100%; height: auto; max-height: 150px;">
+                    <h3 class="research-title">candora.ai</h3>
+                </a>
             </div>
         </section>
 
         <!-- Research Section -->
         <section class="section">
-            <h2 class="section-title">Research</h2>
-            <p>I'm interested in Computer Graphics and Vision, specifically rendering, computational photography, geometry, and graphics hardware.</p>
+            <h2 class="section-title">research</h2>
+            <p>i'm interested in computer graphics and vision, specifically rendering, computational photography, geometry, and graphics hardware.</p>
             
-            <!-- Swing Beats Project -->
-            <div class="project">
-                <img src="images/swingbeatslogo.jpeg" alt="Swing Beats Logo" class="project-image">
+            <div class="research-grid">
+                <!-- Swing Beats Project -->
+                <div class="research-item">
+                    <img src="images/swingbeatslogo.jpeg" alt="Swing Beats Logo">
+                    <h3 class="research-title">swing beats</h3>
+                    <p class="research-desc">augmented/virtual reality music visualization and mobile/iot tactile feedback system for teaching/learning how to dance to music.</p>
+                </div>
                 
-                <div class="project-info">
-                    <h3 class="project-title">Swing Beats</h3>
-                    <p>Swing Beats is an augmented/virtual reality music visualization and mobile/IoT tactile feedback system for teaching/learning how to dance to music. The project is to identify the beat of live music using a cellphone app and translating that into tactile feedback on the phone, wearables, and small IoT devices which will enable the accurate movement initiation and footwork during dancing. The app also feeds AR and VR environments in order to produce visualizations of the music and eventually an avatar which can react to the music accurately and hence help teach dance moves to learners. I am mainly focused on the AR and VR side of this project, helping to bolster my experience in Computer Graphics.</p>
+                <!-- Hydration Automation Project -->
+                <div class="research-item">
+                    <img src="images/HAlogo.webp" alt="Hydration Automation Logo">
+                    <h3 class="research-title">hydration automation</h3>
+                    <p class="research-desc">iot system for continuously monitoring the level of water in water tanks.</p>
                 </div>
-            </div>
-            
-            <!-- Hydration Automation Project -->
-            <div class="project">
-                <img src="images/HAlogo.webp" alt="Hydration Automation Logo" class="project-image">
                 
-                <div class="project-info">
-                    <h3 class="project-title">Hydration Automation</h3>
-                    <p>IoT system for continuously monitoring the level of water in water tanks.</p>
+                <!-- HiveSpy Project -->
+                <div class="research-item">
+                    <img src="images/HiveSpyLogo.webp" alt="HiveSpy Logo">
+                    <h3 class="research-title">hivespy</h3>
+                    <p class="research-desc">iot system for continuously monitoring the amount of honey in each individual frame in the beehive.</p>
                 </div>
-            </div>
-            
-            <!-- HiveSpy Project -->
-            <div class="project">
-                <img src="images/HiveSpyLogo.webp" alt="HiveSpy Logo" class="project-image">
                 
-                <div class="project-info">
-                    <h3 class="project-title">HiveSpy</h3>
-                    <p>IoT system for continuously monitoring the amount of honey in each individual frame in the beehive.</p>
+                <!-- DOxy Project -->
+                <div class="research-item">
+                    <h3 class="research-title">doxy: dissolved oxygen monitoring</h3>
+                    <p class="research-desc">iot system which utilizes cost-effective sensing units for measuring dissolved oxygen levels present in bodies of water.</p>
                 </div>
-            </div>
-            
-            <!-- DOxy Project -->
-            <div class="project">
-                <div class="project-info">
-                    <h3 class="project-title">DOxy: Dissolved Oxygen Monitoring</h3>
-                    <p>DOxy is an IoT System which utilizes cost-effective, accessible, and sustainable Sensing Units (SUs) for measuring the dissolved oxygen levels present in bodies of water which send their readings to a web based cloud infrastructure for storage, analysis, and visualization. DOxy's SUs are equipped with a High-sensitivity Pulse Oximeter meant for measuring dissolved oxygen levels in human blood, not water. Hence a number of parallel readings of water samples were gathered by both the High-sensitivity Pulse Oximeter and a standard dissolved oxygen meter. Then two approaches were investigated. One, in which various machine learning models were trained and tested to produce a dynamic mapping of sensor readings to actual DO values. And another in which curve-fitting models were used to produce successful conversion formula usable in the DOxy SUs offline. Both proved successful in producing accurate results. <a href="data/doxy.pdf">Pending Publication "DOxy 2.0" in MDPI Sensor Networks Journal.</a></p>
-                </div>
-            </div>
-            
-            <!-- EACP Project -->
-            <div class="project">
-                <div class="project-info">
-                    <h3 class="project-title">ÂB</h3>
-                    <p>An Energy Aware Communication Protocols (EACP) for use in IoT and other networks which is currently under testing in EPIC Lab's DOxy, HA, and HiveSpy IoT projects.</p>
-                </div>
-            </div>
-            
-            <!-- Ransomware Detection Project -->
-            <div class="project">
-                <div class="project-info">
-                    <h3 class="project-title">Ransomware Detection using Machine Learning</h3>
-                    <p>Using Machine Learning to detect ransomware with application on programmable networks. My current work can be viewed here: <a href="https://github.com/tspython/Ransomware-Detection-XG">Ransomware Detection XG</a></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section class="section">
-            <h2 class="section-title">Projects</h2>
-            <p>My independent programming/graphics work.</p>
-            
-            <!-- 3D Face Object Mesh Project -->
-            <div class="project">
-                <img src="images/face_rotation.gif" alt="3D Face Object Mesh GIF" class="project-image">
                 
-                <div class="project-info">
-                    <h3 class="project-title">3D Face Object</h3>
-                    <p>Using SDL to render a 3D face object by reading vertex and triangle data from files, performing rotations and zoom based on user input, and displaying the object on the screen.</p>
+                <!-- EACP Project -->
+                <div class="research-item">
+                    <h3 class="research-title">âb</h3>
+                    <p class="research-desc">energy aware communication protocols (eacp) for use in iot and other networks.</p>
+                </div>
+                
+                <!-- Ransomware Detection Project -->
+                <div class="research-item">
+                    <h3 class="research-title">ransomware detection</h3>
+                    <p class="research-desc">using machine learning to detect ransomware with application on programmable networks. <a href="https://github.com/tspython/Ransomware-Detection-XG">view code</a></p>
                 </div>
             </div>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2025 Tushar Shrivastav. All rights reserved.</p>
-    </footer>
 </body>
 </html>

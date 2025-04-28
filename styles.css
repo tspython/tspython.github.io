@@ -1,19 +1,23 @@
 body {
     text-align: center;
-    font-family: sans-serif;
+    font-family: 'JetBrains Mono', monospace;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
 }
 
 .top {
     margin: auto;
     display: flex;
-    /* align-items: center; */
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .nfc_logo, .afc_logo {
     width: 100px;
     height: 100px;
-    /* position: absolute; */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -23,58 +27,43 @@ body {
 
 .afc_logo {
     margin-right: 100px;
-    /* left: 0; */
 }
 .nfc_logo {
     margin-left: 100px;
-    /* right: 0; */
 }
 
 .team {
     width: 100px;
     height: 70px;
     margin: 2px 2px;
-
-    border: 1px solid black;
-    border-radius: 5px;
-
+    border: 1px solid #222;
     display: block;
     position: relative;
+    background-color: #111;
 }
 
 #afc_wc .seed, #afc_div .seed, #afc_conf .seed{
     left: -1px;
-    border-top-left-radius: 5px;
-    border-bottom-right-radius: 5px;
 }
 
 #nfc_wc .seed, #nfc_div .seed, #nfc_conf .seed{
     right: -1px;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px;
 }
 
 .team .seed {
     position: absolute;
     top: -1px;
-
-    background-color: black;
-
+    background-color: #222;
     width: 18px;
     height: 18px;
     line-height: 18px;
-    /* padding: 1px; */
-
-    border: 1px solid black;
+    border: 1px solid #222;
     color: white;
     text-align: center;
-
     font-size: 20px;
-    font-weight: bold;
+    font-weight: normal;
     font-family: monospace;
-
 }
-
 
 #sb_game .team {
     display: inline-block
@@ -100,7 +89,6 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-
     position: relative;
 }
 
@@ -111,8 +99,10 @@ body {
     justify-content: center;
 }
 
-.container {
-    display: inline-block;
+.bracket-wrapper {
+    overflow-x: auto;
+    max-width: 100%;
+    padding-bottom: 20px;
 }
 
 .team_layer {
@@ -132,10 +122,11 @@ body {
 #bracket .selecting .team_layer { background-color: red; }
 
 .round {
-    /* border: 1px solid black; */
     margin: 0 15px;
     display: flex;
     flex-direction: column;
+    background-color: #111;
+    padding: 10px;
 }
 
 .game {
@@ -154,11 +145,25 @@ body {
 .round .label,
 .superbowl_logo,
 .champ_label {
-    font-size: 20pt;
-    font-family: sans-serif;
+    font-size: 16pt;
+    font-family: 'JetBrains Mono', monospace;
+    color: #fff;
+    text-transform: lowercase;
+    font-weight: normal;
 }
 
 #share_url {
     width: 300px;
+    background-color: #111;
+    color: #fff;
+    border: 1px solid #222;
+    padding: 8px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
 }
 
