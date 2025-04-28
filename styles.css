@@ -1,0 +1,169 @@
+body {
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+.top {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.nfc_logo, .afc_logo {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    position: relative;
+}
+
+.afc_logo {
+    margin-right: 100px;
+}
+.nfc_logo {
+    margin-left: 100px;
+}
+
+.team {
+    width: 100px;
+    height: 70px;
+    margin: 2px 2px;
+    border: 1px solid #222;
+    display: block;
+    position: relative;
+    background-color: #111;
+}
+
+#afc_wc .seed, #afc_div .seed, #afc_conf .seed{
+    left: -1px;
+}
+
+#nfc_wc .seed, #nfc_div .seed, #nfc_conf .seed{
+    right: -1px;
+}
+
+.team .seed {
+    position: absolute;
+    top: -1px;
+    background-color: #222;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    border: 1px solid #222;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: monospace;
+}
+
+#sb_game .team {
+    display: inline-block
+}
+
+#sb_game .seed {
+    display: none;
+    visibility: hidden;
+}
+
+.team-clickable {
+    cursor: pointer;
+}
+
+.team_logo {
+    width: 90px;
+    height: 60px;
+    border: 0;
+    margin: 5px;
+    padding: 0;
+    top: 0;
+    left: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.bracket {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bracket-wrapper {
+    overflow-x: auto;
+    max-width: 100%;
+    padding-bottom: 20px;
+}
+
+.team_layer {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    opacity: .2;
+    filter: alpha(opacity=20);
+    position: absolute;
+}
+
+#bracket .selected .team_layer { background-color: green; }
+#bracket .selecting .team_layer { background-color: red; }
+
+.round {
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #111;
+    padding: 10px;
+}
+
+.game {
+    margin: 20px auto;
+    white-space: nowrap;
+}
+
+.champ {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.round .label,
+.superbowl_logo,
+.champ_label {
+    font-size: 16pt;
+    font-family: 'JetBrains Mono', monospace;
+    color: #fff;
+    text-transform: lowercase;
+    font-weight: normal;
+}
+
+#share_url {
+    width: 300px;
+    background-color: #111;
+    color: #fff;
+    border: 1px solid #222;
+    padding: 8px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+}
+

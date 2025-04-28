@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>tushar's graphics programming</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .graphics-card {
+            display: block;
+            background-color: #111;
+            border: 1px solid #222;
+            margin-bottom: 2rem;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+            max-width: 500px;
+        }
+        
+        .graphics-card:hover {
+            opacity: 0.8;
+        }
+        
+        .graphics-card img {
+            width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .graphics-card-title {
+            padding: 1rem;
+            font-size: 1.2rem;
+            color: #fff;
+            margin: 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Shader Background Canvas -->
+    <canvas id="shader-background"></canvas>
+    
+    <header>
+        <h1>tushar</h1>
+        <p class="subtitle">programmer</p>
+        
+        <div class="social-icons">
+            <a href="https://github.com/tspython/" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/tspython6535" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.shadertoy.com/user/case6535" title="Shadertoy"><i class="fa fa-code"></i></a>
+        </div>
+        
+        <nav>
+            <a href="index.html">home</a>
+            <a href="blog.html">blog</a>
+            <a href="nfl_bracket.html">nfl bracket maker</a>
+            <a href="graphics.html">graphics programming</a>
+        </nav>
+    </header>
+
+    <main>
+        <a href="https://github.com/tspython/COEN-148/tree/master/assignment_2" class="graphics-card">
+            <img src="images/face_rotation.gif" alt="3D Face with trackable mouse movements">
+            <h3 class="graphics-card-title">3D Face Object</h3>
+        </a>
+    </main>
+    
+    <!-- Shader Background Script -->
+    <script src="shader-background.js"></script>
+</body>
+</html> 
