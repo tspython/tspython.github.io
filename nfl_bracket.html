@@ -253,10 +253,30 @@
       border: 1px solid #222;
       padding: 8px;
     }
+    
+    /* Fixed seed numbers */
+    .team .seed {
+      position: absolute;
+      top: -1px;
+      background-color: #222;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      border: 1px solid #222;
+      color: white;
+      text-align: center;
+      font-size: 14px;
+      font-weight: normal;
+      font-family: monospace;
+      overflow: hidden;
+    }
   </style>
 </head>
 
 <body>
+  <!-- Shader Background Canvas -->
+  <canvas id="shader-background"></canvas>
+  
   <header>
     <h1>tushar</h1>
     <p class="subtitle">programmer</p>
@@ -331,6 +351,9 @@
       <button id="reset">reset selections</button>
     </div>
   </main>
+  
+  <!-- Shader Background Script -->
+  <script src="shader-background.js"></script>
 </body>
 
 </html>
