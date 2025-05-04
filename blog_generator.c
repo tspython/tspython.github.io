@@ -202,6 +202,9 @@ void convert_markdown_to_html(const char *md_path, const char *html_path, const 
     fprintf(html_file, "            <a href=\"https://github.com/tspython/\" title=\"GitHub\"><i class=\"fab fa-github\"></i></a>\n");
     fprintf(html_file, "            <a href=\"https://twitter.com/tspython6535\" title=\"Twitter\"><i class=\"fab fa-twitter\"></i></a>\n");
     fprintf(html_file, "            <a href=\"https://www.shadertoy.com/user/case6535\" title=\"Shadertoy\"><i class=\"fa fa-code\"></i></a>\n");
+    fprintf(html_file, "            <a href=\"https://huggingface.co/tspython\" title=\"Hugging Face\">\n");
+    fprintf(html_file, "                <img src=\"https://svgl.app/library/hugging_face.svg\" alt=\"Hugging Face\" style=\"width: 16px; height: 16px; vertical-align: middle;\">\n");
+    fprintf(html_file, "            </a>\n");
     fprintf(html_file, "        </div>\n");
     fprintf(html_file, "        \n");
     fprintf(html_file, "        <nav>\n");
@@ -296,6 +299,9 @@ void update_blog_index(BlogPost *posts, int count) {
     fprintf(index_file, "            <a href=\"https://github.com/tspython/\" title=\"GitHub\"><i class=\"fab fa-github\"></i></a>\n");
     fprintf(index_file, "            <a href=\"https://twitter.com/tspython6535\" title=\"Twitter\"><i class=\"fab fa-twitter\"></i></a>\n");
     fprintf(index_file, "            <a href=\"https://www.shadertoy.com/user/case6535\" title=\"Shadertoy\"><i class=\"fa fa-code\"></i></a>\n");
+    fprintf(index_file, "            <a href=\"https://huggingface.co/tspython\" title=\"Hugging Face\">\n");
+    fprintf(index_file, "                <img src=\"https://svgl.app/library/hugging_face.svg\" alt=\"Hugging Face\" style=\"width: 16px; height: 16px; vertical-align: middle;\">\n");
+    fprintf(index_file, "            </a>\n");
     fprintf(index_file, "        </div>\n");
     fprintf(index_file, "        \n");
     fprintf(index_file, "        <nav>\n");
