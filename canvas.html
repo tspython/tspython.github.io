@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>tushar's canvas app</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        html, body { 
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #222;
+            touch-action: none;
+        }
+        
+        #shader-background {
+            display: none;
+        }
+        
+                 header {
+             display: none; 
+         }
+        
+        #wasm-example { 
+            width: 100vw; 
+            height: 100vh; 
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        
+        canvas { 
+            display: block; 
+            position: absolute;
+            top: 0;
+            left: 0;
+            touch-action: none;
+        }
+        
+        #loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            color: #fff;
+            font-family: monospace;
+        }
+        
+        #error-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #222;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            color: #ff6b6b;
+            font-family: monospace;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading-overlay">
+        Loading WebAssembly canvas application...
+    </div>
+    
+    <div id="error-overlay">
+        <div>
+            <h2>Failed to load canvas app</h2>
+            <p>Please refresh the page or check the console for errors.</p>
+            <br>
+            <a href="index.html" style="color: #fff; text-decoration: underline;">← Back to home</a>
+        </div>
+    </div>
+    
+    <header>
+        <h1>tushar</h1>
+        <p class="subtitle">canvas app</p>
+        
+        <nav>
+            <a href="index.html">home</a>
+            <a href="blog.html">blog</a>
+            <a href="graphics.html">graphics</a>
+        </nav>
+    </header>
+
+    <div id="wasm-example"></div>
+    
+    <script type="module">
+        import init from './canvas/wcanvas.js';
+        
+        async function loadApp() {
+            try {
+                await init();
+                document.getElementById('loading-overlay').style.display = 'none';
+                console.log('Canvas app loaded successfully');
+            } catch (error) {
+                console.error('Failed to load canvas app:', error);
+                document.getElementById('loading-overlay').style.display = 'none';
+                document.getElementById('error-overlay').style.display = 'flex';
+            }
+        }
+        
+        loadApp();
+    </script>
+</body>
+</html> 
